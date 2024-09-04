@@ -15,7 +15,7 @@ btn.addEventListener("click", () => {
       img.onload = () => resolve(img); 
       img.onerror = () => reject(new Error(Failed to load image's URL: ${image.url}));
     });
-  };
+  });
 
   Promise.all(images.map(downloadImage))
     .then((loadedImages) => {
